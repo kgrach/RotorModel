@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{ea5921b7-75aa-45ac-aa68-c9a4035ddf93}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{205402f2-adc9-40e5-9606-f6ee846d44fc}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{31697cce-0e68-4a34-b3c3-b092195b8634}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;jpg;jpeg;jpe;manifest</Extensions>
+    </Filter>
+    <Filter Include="Header Files\External">
+      <UniqueIdentifier>{116dda45-8581-4a42-b668-e758ff147426}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\External\WTL10">
+      <UniqueIdentifier>{3ee432a7-d4c5-4502-a96d-d5ecc2663fee}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RotorModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="View.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AboutDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="External\wtl10\atlapp.h">
+      <Filter>Header Files\External\WTL10</Filter>
+    </ClInclude>
+    <ClInclude Include="External\wtl10\atlcrack.h">
+      <Filter>Header Files\External\WTL10</Filter>
+    </ClInclude>
+    <ClInclude Include="External\wtl10\atlctrls.h">
+      <Filter>Header Files\External\WTL10</Filter>
+    </ClInclude>
+    <ClInclude Include="External\wtl10\atlctrlw.h">
+      <Filter>Header Files\External\WTL10</Filter>
+    </ClInclude>
+    <ClInclude Include="External\wtl10\atlctrlx.h">
+      <Filter>Header Files\External\WTL10</Filter>
+    </ClInclude>
+    <ClInclude Include="External\wtl10\atlddx.h">
+      <Filter>Header Files\External\WTL10</Filter>
+    </ClInclude>
+    <ClInclude Include="External\wtl10\atldlgs.h">
+      <Filter>Header Files\External\WTL10</Filter>
+    </ClInclude>
+    <ClInclude Include="External\wtl10\atldwm.h">
+      <Filter>Header Files\External\WTL10</Filter>
+    </ClInclude>
+    <ClInclude Include="External\wtl10\atlfind.h">
+      <Filter>Header Files\External\WTL10</Filter>
+    </ClInclude>
+    <ClInclude Include="External\wtl10\atlframe.h">
+      <Filter>Header Files\External\WTL10</Filter>
+    </ClInclude>
+    <ClInclude Include="External\wtl10\atlgdi.h">
+      <Filter>Header Files\External\WTL10</Filter>
+    </ClInclude>
+    <ClInclude Include="External\wtl10\atlmisc.h">
+      <Filter>Header Files\External\WTL10</Filter>
+    </ClInclude>
+    <ClInclude Include="External\wtl10\atlprint.h">
+      <Filter>Header Files\External\WTL10</Filter>
+    </ClInclude>
+    <ClInclude Include="External\wtl10\atlres.h">
+      <Filter>Header Files\External\WTL10</Filter>
+    </ClInclude>
+    <ClInclude Include="External\wtl10\atlribbon.h">
+      <Filter>Header Files\External\WTL10</Filter>
+    </ClInclude>
+    <ClInclude Include="External\wtl10\atlscrl.h">
+      <Filter>Header Files\External\WTL10</Filter>
+    </ClInclude>
+    <ClInclude Include="External\wtl10\atlsplit.h">
+      <Filter>Header Files\External\WTL10</Filter>
+    </ClInclude>
+    <ClInclude Include="External\wtl10\atltheme.h">
+      <Filter>Header Files\External\WTL10</Filter>
+    </ClInclude>
+    <ClInclude Include="External\wtl10\atluser.h">
+      <Filter>Header Files\External\WTL10</Filter>
+    </ClInclude>
+    <ClInclude Include="External\wtl10\atlwinx.h">
+      <Filter>Header Files\External\WTL10</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RotorModel.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\RotorModel.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
