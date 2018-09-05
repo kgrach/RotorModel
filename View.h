@@ -26,19 +26,26 @@ public:
 
 	LRESULT OnPaint(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& /*bHandled*/)
 	{
-		CPaintDC dc(m_hWnd);
+		
 		RECT lpSize;
 		//TODO: Add your drawing code here
 		
 		::GetClientRect(m_hWnd, &lpSize);
 		
-
-		dc.LineTo(lpSize.right, lpSize.bottom);
-
+		CPaintDC dc(m_hWnd);
+		
 		dc.MoveTo(lpSize.right / 2, lpSize.bottom / 2);
 		dc.AngleArc(lpSize.right / 2, lpSize.bottom / 2, 100, 0, 30);
-	
+		
+		dc.MoveTo(lpSize.right / 2, lpSize.bottom / 2);
+		dc.AngleArc(lpSize.right / 2, lpSize.bottom / 2, 50, 30, 360);
+		
+		//dc.LineTo(lpSize.right, lpSize.bottom);
+		
+		
 
+		//
+			
 		return 0;
 	}
 };
