@@ -4,16 +4,14 @@
 
 #pragma once
 
+class CMainFrame;
+
 class CView : public CWindowImpl<CView>
 {
+	
 public:
-	DECLARE_WND_CLASS(NULL)
 
-	BOOL PreTranslateMessage(MSG* pMsg)
-	{
-		pMsg;
-		return FALSE;
-	}
+	DECLARE_WND_CLASS(NULL)
 
 	BEGIN_MSG_MAP(CView)
 		MESSAGE_HANDLER(WM_PAINT, OnPaint)

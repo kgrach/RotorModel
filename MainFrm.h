@@ -15,10 +15,26 @@ public:
 	CView m_view;
 	CCommandBarCtrl m_CmdBar;
 
+	void IterceptKeyMessage(MSG* pMsg) {
+		
+		if (pMsg->hwnd == m_view) {
+
+			if (pMsg->message == WM_KEYDOWN) {
+
+				if (pMsg->wParam == VK_DOWN || pMsg->wParam == VK_UP) {
+
+					pMsg->hwnd = *this;
+				}
+			}
+		}
+	}
+
 	virtual BOOL PreTranslateMessage(MSG* pMsg)
 	{
 		if(CFrameWindowImpl<CMainFrame>::PreTranslateMessage(pMsg))
 			return TRUE;
+
+		IterceptKeyMessage(pMsg);
 
 		return m_view.PreTranslateMessage(pMsg);
 	}
@@ -36,7 +52,8 @@ public:
 
 	BEGIN_MSG_MAP(CMainFrame)
 		MESSAGE_HANDLER(WM_CREATE, OnCreate)
-		MESSAGE_HANDLER(WM_DESTROY, OnDestroy)
+		MESSAGE_HANDLER(WM_CREATE, OnCreate)
+		MESSAGE_HANDLER(WM_KEYDOWN, OnPressKey)
 		COMMAND_ID_HANDLER(ID_APP_EXIT, OnFileExit)
 		COMMAND_ID_HANDLER(ID_FILE_NEW, OnFileNew)
 		COMMAND_ID_HANDLER(ID_VIEW_TOOLBAR, OnViewToolBar)
@@ -50,6 +67,26 @@ public:
 //	LRESULT MessageHandler(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& /*bHandled*/)
 //	LRESULT CommandHandler(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL& /*bHandled*/)
 //	LRESULT NotifyHandler(int /*idCtrl*/, LPNMHDR /*pnmh*/, BOOL& /*bHandled*/)
+
+	LRESULT OnPressKey(UINT /*uMsg*/, WPARAM wParam, LPARAM /*lParam*/, BOOL& bHandled)
+	{
+		// unregister message filtering and idle updates
+
+		bHandled = FALSE;
+		if (wParam == VK_DOWN) {
+			// Do something here
+			::MessageBox(nullptr, L"ArrowDown pressed", L"Node", MB_OK);
+			return TRUE;
+		}
+
+		if (wParam == VK_UP) {
+			// Do something here
+			::MessageBox(nullptr, L"ArrowUp pressed", L"Node", MB_OK);
+			return TRUE;
+		}
+
+		return FALSE;
+	}
 
 	LRESULT OnCreate(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& /*bHandled*/)
 	{
